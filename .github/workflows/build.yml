@@ -35,7 +35,7 @@ jobs:
         uses: actionshub/markdownlint@main
       # Install LaTeX and the required Hack font
       - name: Install building tools
-        run: sudo apt-get install texlive-latex-extra fonts-hack-ttf texlive-fonts-recommended texlive-fonts-extra lmodern texlive-luatex texlive-xetex latexmk python-pygments
+        run: sudo apt-get install texlive-latex-extra fonts-hack-ttf texlive-fonts-recommended texlive-fonts-extra lmodern texlive-luatex texlive-xetex latexmk python3-pygments
       # Build the proposal with the Makefile
       - name: Build the proposal
         run: make
