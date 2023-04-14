@@ -88,8 +88,8 @@
 % color package
 \ifpdf
   \RequirePackage[pdftex]{color}
-\else
-  \RequirePackage[dvips]{color}
+%\else
+  %\RequirePackage[dvips]{color}
 \fi
 
 % fontenc package
