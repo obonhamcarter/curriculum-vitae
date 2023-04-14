@@ -409,7 +409,7 @@
         \fancyfoot[r]{\addressfont\color{quotecolor}\footnotesize\thepage/\pageref{lastpage}}}%
       \pagestyle{plain}}{}}%
   \AtEndDocument{\label{lastpage}}}%%%
-  \fi
+ % \fi
 
 % thebibliography environment, for use with BibTeX
 \newcommand{\refname}{Publications}
