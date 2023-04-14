@@ -101,7 +101,7 @@
 % latin modern fonts
 \AtEndOfClass{%
   \if@lmodern
-    \RequirePackage{lmodern}\fi}
+    \RequirePackage{lmodern}}\fi
 
 % symbols like \Telefon, \Mobilefone, \Letter and \Email
 \RequirePackage{marvosym}
@@ -307,7 +307,7 @@
     \end{longtable}%
 %    \phantomsection% reset the anchor for hyperrefs
 %    \par\null%
-    \@sectionopenfalse\fi}
+    \@sectionopenfalse}\fi %%%
 \AtEndDocument{\closesection{}}
 % usage: \section{<title>}, or \emptysection{}
 \newcommand*{\section}[1]{%
