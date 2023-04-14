@@ -12,30 +12,20 @@ on:
   pull_request:
     branches: [ main ]
 
-# A workflow run is made up of one or more jobs
-# that can run sequentially or in parallel
 jobs:
-  # The workflow contains a single job called "build"
   build:
-    # The runner will run on the latest version of Ubuntu
     runs-on: ubuntu-latest
 
-    # Define the steps run in the workflow
     steps:
-      # Checkout out the code in the repository
-      # Checkout the submodule for the bibliography
-      - name: Check out code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: wtfjoke/setup-tectonic@v2
         with:
-          submodules: 'true'
-      # Run the mdl linting tool, which references
-      # the .mdlrc file stored in the repo's root
-      # for further configuration details
-      - name: Run mdl
-        uses: actionshub/markdownlint@main
-      # Install LaTeX and the required Hack font
-      - name: Install building tools
-        run: sudo apt-get install texlive-latex-extra fonts-hack-ttf texlive-fonts-recommended texlive-fonts-extra lmodern texlive-luatex texlive-xetex latexmk python3-pygments
-      # Build the proposal with the Makefile
-      - name: Build the proposal
-        run: make
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Tectonic
+        run: tectonic cv_obc.tex
+      - name: Upload pdf
+        uses: actions/upload-artifact@v3
+        with:
+          name: cv_obc
+          path: cv_obc.pdf
