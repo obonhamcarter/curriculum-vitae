@@ -88,8 +88,8 @@
 % color package
 \ifpdf
   \RequirePackage[pdftex]{color}
-%\else
-  %\RequirePackage[dvips]{color}
+%%%\else
+  %%%\RequirePackage[dvips]{color}
 \fi
 
 % fontenc package
@@ -121,8 +121,8 @@
 \RequirePackage{url}
 \ifpdf
   \RequirePackage[pdftex]{hyperref}
-%\else
-%  \RequirePackage[dvips]{hyperref}\fi
+%%%\else
+%%%  \RequirePackage[dvips]{hyperref}\fi
 \AtEndOfClass{%
   \AtBeginDocument{%
     \hypersetup{%
@@ -151,8 +151,9 @@
 % graphics
 \ifpdf
   \RequirePackage[pdftex]{graphicx}
-%\else
-%  \RequirePackage[dvips]{graphicx}\fi
+%%%\else
+%%%  \RequirePackage[dvips]{graphicx}
+\fi
 
 % headers and footers
 \usepackage{fancyhdr}
@@ -334,7 +335,8 @@
   \if@firstcvlineofsection%
     \@firstcvlineofsectionfalse%
   %%%\else%
-  %%%  \\[#1]\fi%
+  %%%  \\[#1]
+  \fi%
   \raggedleft\hintfont{#2} &#3}
 
 % usage (inside section}: \cvdoubleitem{subtitle}{text}{subtitle}{text}
@@ -406,8 +408,8 @@
       \fancypagestyle{plain}{%
         \fancyfoot[r]{\addressfont\color{quotecolor}\footnotesize\thepage/\pageref{lastpage}}}%
       \pagestyle{plain}}{}}%
-  \AtEndDocument{\label{lastpage}}%
-  \fi}
+  \AtEndDocument{\label{lastpage}}}%%%
+  \fi
 
 % thebibliography environment, for use with BibTeX
 \newcommand{\refname}{Publications}
