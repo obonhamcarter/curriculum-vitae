@@ -121,8 +121,8 @@
 \RequirePackage{url}
 \ifpdf
   \RequirePackage[pdftex]{hyperref}
-\else
-  \RequirePackage[dvips]{hyperref}\fi
+%\else
+%  \RequirePackage[dvips]{hyperref}\fi
 \AtEndOfClass{%
   \AtBeginDocument{%
     \hypersetup{%
@@ -151,8 +151,8 @@
 % graphics
 \ifpdf
   \RequirePackage[pdftex]{graphicx}
-\else
-  \RequirePackage[dvips]{graphicx}\fi
+%\else
+%  \RequirePackage[dvips]{graphicx}\fi
 
 % headers and footers
 \usepackage{fancyhdr}
