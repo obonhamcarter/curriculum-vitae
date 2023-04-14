@@ -333,8 +333,8 @@
 \newcommand*{\cvline}[3][.25em]{%
   \if@firstcvlineofsection%
     \@firstcvlineofsectionfalse%
-  \else%
-    \\[#1]\fi%
+  %%%\else%
+  %%%  \\[#1]\fi%
   \raggedleft\hintfont{#2} &#3}
 
 % usage (inside section}: \cvdoubleitem{subtitle}{text}{subtitle}{text}
