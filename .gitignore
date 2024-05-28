@@ -9,7 +9,7 @@
 *.lot
 *.out
 *.ps
-*.pdf
+#*.pdf
 *.tex~
 *.toc
 *.synctex.gz
