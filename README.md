@@ -1,4 +1,4 @@
-# Latex project: The latex files for the CV of Oliver Bonham-Carter
+# The latex project files for the CV of Oliver Bonham-Carter
 
 ## Setup
 
